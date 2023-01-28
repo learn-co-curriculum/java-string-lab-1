@@ -25,7 +25,7 @@ rules above.   You are also provided a Junit test class `PasswordCheckerTest`, w
 has the test methods disabled.  As you solve each task, remove the `@Disabled` annotation
 to run the test method and confirm your implementation.
 
-Do not use regular expressions to solve any of the tasks.
+Do not use regular expressions to solve any of the tasks. We'll cover regular expressions in a later unit.
 
 You may use the methods of the [Java 17 String](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html) class.
 
@@ -69,7 +69,10 @@ Do not import string utility classes from external packages.
 1. The `PasswordChecker` class contains a `passwordStrength` method that returns `0`.   
    Edit the method to return the strength of the parameter string based on how many
    of the methods `isValidLength`, `containsSpecialChar`, `containsDigit`, and `containsNonDigit`
-   return a positive boolean value.
+   return a positive boolean value. The `passwordStrength` method should give 1 point for each method that returns `true`.
+   - If all four of the methods from the previous tasks return `true`, then the password strength should be 4.
+   - If only three methods return `true`, the password strength should be 3.
+   - Etc.
 2. Edit `PasswordCheckerTest` to remove the `@Disabled` annotation from the `passwordStrength` method.
 3. Run `PasswordCheckerTest` and confirm the tests all pass.
 
